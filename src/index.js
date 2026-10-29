@@ -13,12 +13,12 @@ const server = http.createServer((request, response) => {
         const name = params.get('hello');
 
         if (!name) {
-            response.writeHead(400, 'Bad Request', { 'Content-Type': 'text/plain; charset=utf-8' });
+            response.writeHead(400, 'Bad Request', { 'Content-Type': 'text/plain' });
             response.end('Enter a name');
             return;
         }
 
-        response.writeHead(200, 'OK', { 'Content-Type': 'text/plain; charset=utf-8' });
+        response.writeHead(200, 'OK', { 'Content-Type': 'text/plain' });
         response.end(`Hello, ${name}.`);
         return;
     }
@@ -36,7 +36,7 @@ const server = http.createServer((request, response) => {
         return;
     }
 
-    response.writeHead(200, 'OK', { 'Content-Type': 'text/plain; charset=utf-8' });
+    response.writeHead(200, 'OK', { 'Content-Type': 'text/plain' });
     response.end('Hello, World!');
 });
 
